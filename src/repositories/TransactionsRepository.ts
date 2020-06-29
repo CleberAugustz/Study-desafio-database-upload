@@ -8,12 +8,6 @@ interface Balance {
   total: number;
 }
 
-interface CreateTransactionDTO {
-  title: string;
-  value: number;
-  type: 'income' | 'outcome';
-}
-
 @EntityRepository(Transaction)
 class TransactionsRepository extends Repository<Transaction> {
   public async validateValue(
